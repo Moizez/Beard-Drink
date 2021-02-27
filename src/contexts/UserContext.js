@@ -1,17 +1,16 @@
 import React, { createContext, useReducer } from 'react';
 import { initialState, UserReducer } from '../reducers/UserReducer'
 
-export const Context = createContext({})
+export const UserContext = createContext({})
 
-const UserContext = ({ children }) => {
+export default ({ children }) => {
 
     const [state, dispatch] = useReducer(UserReducer, initialState)
 
     return (
-        <Context.Provider value={{ state, dispatch }}>
+        <UserContext.Provider value={{ state, dispatch }}>
             {children}
-        </Context.Provider>
+        </UserContext.Provider>
     );
 }
 
-export default UserContext

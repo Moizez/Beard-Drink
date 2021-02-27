@@ -20,11 +20,17 @@ const Input = styled.TextInput`
 
 `;
 
-export default ({ IconSvg }) => {
+export default ({ IconSvg, placeholder, value, onChangeText, password }) => {
     return (
         <InputBox>
             <IconSvg width='24' height='24' fill='#268596' />
-            <Input />
+            <Input
+                placeholder={placeholder}
+                placeholderTextColor='#268596'
+                value={value}
+                onChangeText={onChangeText}
+                secureTextEntry={password}
+            />
         </InputBox>
     );
 }
