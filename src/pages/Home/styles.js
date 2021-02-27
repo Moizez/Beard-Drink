@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.SafeAreaView`
     flex: 1;
     background-color: #6e0d25;
+    opacity: 0.9;
 `;
 
 export const Scroller = styled.ScrollView`
@@ -54,3 +55,9 @@ export const LocationButton = styled.TouchableOpacity`
 export const LoadingIcon = styled.ActivityIndicator`
     margin-top: 50px;
 `;
+
+
+export const ListBox = styled.View`
+margin-top: 30px;
+margin-bottom: 30px;
+`
