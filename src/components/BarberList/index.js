@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native'
+import { useNavigation } from '@react-navigation/native'
 
 import StarsRated from '../../components/StarsRated'
 
@@ -42,13 +43,25 @@ const ProfileButtonText = styled.Text`
 `;
 
 const BarberList = ({ data }) => {
+
+    const navigation = useNavigation()
+
+    const handleClick = () => {
+        navigation.navigate('Barber', {
+            id: data.id,
+            name: data.name,
+            avatar: data.avatar,
+            stars: data.stars
+        })
+    }
+
     return (
-        <Container>
+        <Container onPress={handleClick}>
             <Avatar source={{ uri: data.avatar }} />
             <InfoBox>
                 <UserName>{data.name}</UserName>
 
-                <StarsRated stars={data.stars} showNumber={true}/>
+                <StarsRated stars={data.stars} showNumber={true} />
 
                 <ProfileButton>
                     <ProfileButtonText>Ver perfil</ProfileButtonText>
