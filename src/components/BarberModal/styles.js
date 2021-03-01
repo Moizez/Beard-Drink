@@ -73,3 +73,67 @@ export const ConfirmButtonText = styled.Text`
     font-size: 18px;
     font-weight: bold;
 `;
+
+export const DateInfo = styled.View`
+    flex-direction: row;
+`;
+
+export const DatePrevButton = styled.TouchableOpacity`
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+`;
+
+export const DateTitleBox = styled.View`
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const DateNextButton = styled.TouchableOpacity`
+    flex: 1;
+    align-items: flex-start;
+`;
+
+export const DateTitle = styled.Text`
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+`;
+
+export const ScrollDate = styled.ScrollView``;
+
+export const DateItem = styled.TouchableOpacity`
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+`;
+
+export const DayItem = styled.Text`
+    font-size: 16px;
+    font-weight: bold;
+`;
+
+export const DayItemNumber = styled.Text`
+    font-size: 16px;
+    font-weight: bold;
+`;
+
+export const ScrollTime = styled.ScrollView``;
+
+export const TimeItem = styled.TouchableOpacity`
+    width: 75px;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const TimeItemText = styled.Text`
+    font-size: 16px;
+    font-weight: bold;
+`;
+
